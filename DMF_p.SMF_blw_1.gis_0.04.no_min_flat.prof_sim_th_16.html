@@ -8,8 +8,22 @@
     <script src="https://cdn.datatables.net/1.10.12/js/jquery.dataTables.min.js"></script>
     <script type="text/javascript">
       $("document").ready(function(){
-        $(".dataframe").DataTable({
-          paging: false
+        var table = $('.dataframe').DataTable({
+          scrollX: true,
+          lengthMenu: [[10, 25, 50, 100, 200, -1], [10, 25, 50, 100, 200, "All"]],
+        });
+        $('.dataframe tbody').on('click', 'tr', function(){
+          $(this).toggleClass('selected');
+        });
+        $('#count_rows_button').click(function(){
+          alert( table.rows('.selected').data().length +' row(s) selected');
+        });
+        $('a.toggle-vis').on( 'click', function (e){
+          e.preventDefault();
+          // Get the column API object
+          var column = table.column($(this).attr('data-column'));
+          // Toggle the visibility
+          column.visible(!column.visible());
         });
       });
     </script>
@@ -32,9 +46,6 @@
         border: 1px solid;
         border-collapse: collapse;
       }
-      .double_space {
-        line-height: 200%;
-      }
     </style>
   <body>
     <nav>
@@ -54,7 +65,7 @@
     <section class="w3-container w3-grey">
       <h1>G148</h1>
       <h2>Seks, ewolucja i interakcje</h2>
-      <p>File created: 2016.9.13, 11:54:46</p>
+      <p>File created: 2016.9.14, 14:26:28</p>
       <article class="w3-container w3-margin w3-card-8 w3-white">
         <h1>Definitions:</h1>
         <ul id="definitions">
@@ -111,12 +122,12 @@
               <tr>
                 <th>similar profiles</th>
                 <td>42</td>
-                <td>59</td>
+                <td>58</td>
               </tr>
               <tr>
                 <th>dissimilar</th>
                 <td>499</td>
-                <td>493</td>
+                <td>494</td>
               </tr>
               <tr>
                 <th>total</th>
@@ -133,10 +144,47 @@
                 <img src="DMF_p.SMF_blw_1.gis_0.04.no_min_flat.prof_sim_th_16_files/regr_DMF_p.SMF_blw_1.gis_0.04.no_min_flat.prof_sim_th_16.png">
               </div>
           </section>
-          <article class="w3-container w3-margin w3-card-8 w3-dark-grey">
+          <article class="w3-container w3-margin w3-card-8 w3-white">
             <h2>Dataframe</h2>
-            <br class=double_space></br>
-            <table border="1" class="dataframe w3-table w3-striped dataframe">
+            <p>Click to show/hide columns:</p>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="0">Query_ORF</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="1">Query_gene_name</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="2">Array_ORF</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="3">Array_gene_name</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="4">definition_query</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="5">definition_array</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="6">Process_query</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="7">Process_array</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="8">Bioprocesses_similarity</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="9">Query_gene_profile</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="10">Array_gene_profile</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="11">Profiles_similarity_score</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="12">Query_SMF</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="13">Array_SMF</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="14">DMF</a>
+            
+              <a class="toggle-vis w3-btn w3-panel" data-column="15">Genetic_interaction_score</a>
+            
+            <br></br>
+            <p>Click to count selected rows:</p>
+            <button id=count_rows_button class="w3-btn" type="button" name="button">Count selected rows</button>
+            <br></br>
+            <table border="1" class="dataframe dataframe compact hover order-column">
   <thead>
     <tr style="text-align: center;">
       <th>Query_ORF</th>
