@@ -54,8 +54,8 @@
         <li style="width:14%;" class="w3-dropdown-hover">
             <a href="#">G148</a>
             <div class="w3-dropdown-content w3-white">
-              <a href="#">InParanoid-based profiles</a>
-              <a href="#">OrthoFinder-based profiles</a>
+              <a href="InParanoid-based_profiles.html">InParanoid-based profiles</a>
+              <a href="OrthoFinder-based_profiles.html">OrthoFinder-based profiles</a>
               <a href="KEGG-based_profiles.html">KEGG-based profiles</a>
             </div>
         </li>
@@ -65,35 +65,35 @@
     <section class="w3-container w3-grey">
       <h1>G148</h1>
       <h2>Seks, ewolucja i interakcje</h2>
-      <p>File created: 2016.9.15, 12:48:50</p>
+      <p>File created: 2016.9.19, 11:28:38</p>
       <article class="w3-container w3-margin w3-card-8 w3-white">
         <h1>Definitions:</h1>
         <ul id="definitions">
-
+          
             <li>DMF: Double Mutant Fitness</li>
-
+          
             <li>SMF: Single Mutant Fitness</li>
-
+          
             <li>DMF positive: DMF > SMF of query AND array</li>
-
+          
             <li>DMF negative: DMF < SMF of query AND array</li>
-
+          
         </ul>
       </article>
       <article class="w3-container w3-margin w3-card-8 w3-light-grey">
         <h1>Filters:</h1>
         <ul id="filters">
-
+          
             <li>DMF positive</li>
-
+          
             <li>SMF < 1.0</li>
-
+          
             <li>Genetic interaction score > 0.04</li>
-
+          
             <li>No minus-only (eg ------) profiles</li>
-
+          
             <li>Profiles similarity threshold: 14</li>
-
+          
         </ul>
       </article>
       <article class="w3-container w3-margin w3-card-8 w3-white">
@@ -122,12 +122,12 @@
               <tr>
                 <th>similar profiles</th>
                 <td>109</td>
-                <td>89</td>
+                <td>91</td>
               </tr>
               <tr>
                 <th>dissimilar</th>
                 <td>208</td>
-                <td>235</td>
+                <td>233</td>
               </tr>
               <tr>
                 <th>total</th>
@@ -147,39 +147,39 @@
           <article class="w3-container w3-margin w3-card-8 w3-white">
             <h2>Dataframe</h2>
             <p>Click to show/hide columns:</p>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="0">Query_ORF</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="1">Query_gene_name</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="2">Array_ORF</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="3">Array_gene_name</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="4">definition_query</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="5">definition_array</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="6">Process_query</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="7">Process_array</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="8">Bioprocesses_similarity</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="9">Query_gene_profile</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="10">Array_gene_profile</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="11">Profiles_similarity_score</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="12">Query_SMF</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="13">Array_SMF</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="14">DMF</a>
-
+            
               <a class="toggle-vis w3-btn w3-panel" data-column="15">Genetic_interaction_score</a>
-
+            
             <br></br>
             <p>Click to count selected rows:</p>
             <button id=count_rows_button class="w3-btn" type="button" name="button">Count selected rows</button>
