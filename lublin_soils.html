@@ -33,7 +33,7 @@
         <h1>Mothur workflow</h1>
         <p>
           Click on the mothur logo to download the slideshow.
-          Mothur is a great software and it is worth to pay its Creators a visit <a href="http://mothur.org/">here</a>
+          Mothur is a great software and it is worth to pay its Creators a visit <strong><a href="http://mothur.org/">here</a></strong>
         </p>
         <a href="https://bionas.ibb.waw.pl:5001/sharing/sIHzyuQN0">
           <img src="images/mothur_RGB.png" alt="Click to download Mothur workflow slideshow" width="20%;"/>
@@ -47,8 +47,22 @@
         <p>...and how does it look like:</p>
         <h3>Rarefaction</h3>
         <iframe src="html_iframe_plots/V3_V4_primer_1_silva_nr_119.groups.rarefaction.html" width="90%;" height="700px;"></iframe>
+        <p>
+          Rarefaction curves for the observed MOTUs in arable and control Lublin Region soils, at a genetic distance of 0.01.
+        </p>
+        <h4>Tool used to generate the rarefaction curves:</h4>
+        <p>
+          <strong><a href="http://bokeh.pydata.org/en/latest/">Bokeh</a></strong>, python lib
+        </p>
         <h3>OTU classification</h3>
         <iframe src="html_iframe_plots/V3_V4_primer_1_silva_nr_119_classify_otu_krona_2.7.html" width="90%;" height="700px;"></iframe>
+        <p>
+          Taxonomical representation of the observed MOTUs in all Lublin Region soils presented in this study.
+        </p>
+        <h4>Tool used to generate the Taxonomical representation:</h4>
+        <p>
+          <strong><a href="https://github.com/marbl/Krona/">Krona Charts</a></strong>
+        </p>
       </article>
       <article class="w3-container w3-margin w3-card-8 w3-white">
         <h1>Beta Biodiversity</h1>
@@ -95,6 +109,13 @@
             </p>
           </div>
         </div>
+        <h4>Tools used to generate graphs:</h4>
+        <p>
+          heatmap: <strong><a href="http://www.mothur.org/wiki/Heatmap.sim">heatmap.sim</a></strong> from mothur
+        </p>
+        <p>
+          dendrogram: <strong><a href="http://www.geneious.com/">geneious</a></strong>
+        </p>
         <h3>NMDS</h3>
         <p>What Wikipedia says...</p>
         <iframe src="https://en.wikipedia.org/wiki/Multidimensional_scaling" width="90%;" height="400px;"></iframe>
@@ -127,6 +148,10 @@
             </p>
           </div>
         </div>
+        <h4>Tools to generate the NMDS plots:</h4>
+        <p>
+          <strong><a href="http://ggplot2.org/">ggplot2</a></strong>, R lib
+        </p>
       </article>
     </section>
   </body>
